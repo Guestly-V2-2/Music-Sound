@@ -1,0 +1,18 @@
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui", player.PlayerGui)
+
+local video = Instance.new("VideoFrame")
+video.Size = UDim2.fromScale(1,1)
+video.Position = UDim2.fromScale(0,0)
+video.BackgroundTransparency = 1
+video.Video = "https://github.com/Guestly-V2-2/Music-Sound/raw/refs/heads/main/YTDowncom_YouTube_creepy-eye_Media__0U09hiOFoo_001_480p.mp4"
+video.Looped = false
+video.Volume = 1
+video.Parent = gui
+
+video:Play()
+
+-- Tắt sau khi xong
+video.Ended:Connect(function()
+    gui:Destroy()
+end)
